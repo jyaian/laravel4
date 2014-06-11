@@ -15,3 +15,13 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('test', function()
+{
+    return 'testnow!';
+});
+
+Route::get('gouda', 'HomeController@showGouda');
+
+Route::get('boards', 'TestController@getBoards');
+Route::post('boards/add', 'TestController@addBoards');
